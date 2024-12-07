@@ -7,11 +7,18 @@ import viteEslint from 'vite-plugin-eslint';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/hex-vue3-final-sample',
+  base: '/hex-vue3-final-sample/',
   plugins: [vue(), vueDevTools(), viteEslint()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern',
+      },
     },
   },
 });
