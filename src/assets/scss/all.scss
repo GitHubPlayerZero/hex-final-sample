@@ -1,0 +1,13 @@
+// @use '../../../node_modules/bootstrap/scss/bootstrap.scss';  // for Sass compiler
+@use 'bootstrap/dist/css/bootstrap';
+
+.link-active {
+  background-color: yellow;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.box {
+  border: 3px dashed orange;
+  padding: 16px;
+}

@@ -1,8 +1,10 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHashHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  // history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
+  linkActiveClass: "link-active",
   routes: [
     {
       path: '/',
@@ -17,7 +19,25 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
     },
-  ],
-})
+    // 測試
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('../views/test/TestView.vue'),
+      children: [
+        {
+          path: 'bs-form',
+          name: 'testBsForm',
+          component: () => import('../views/test/TestBsForm.vue'),
+        },
+        {
+          path: 'validate-options',
+          name: 'testValidateOptions',
+          component: () => import('../views/test/TestValidateOptions.vue'),
+        },
+      ],
+    }, // 測試 - end
+  ], // routes - end
+}); // router - end
 
-export default router
+export default router;
