@@ -1,8 +1,7 @@
 <template>
   <nav class="bg-light">
     <div class="container">
-      <router-link :to="{ name: 'testBsForm' }">Bootstrap 表單驗證</router-link>｜
-      <router-link :to="{ name: 'testValidateOptions' }">VeeValidate Options API</router-link>｜
+      <!-- <router-link :to="{ name: 'testBsForm' }">Bootstrap 表單驗證</router-link>｜ -->
     </div>
   </nav>
 

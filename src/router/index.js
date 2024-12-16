@@ -25,16 +25,11 @@ const router = createRouter({
       name: 'test',
       component: () => import('../views/test/TestView.vue'),
       children: [
-        {
-          path: 'bs-form',
-          name: 'testBsForm',
-          component: () => import('../views/test/TestBsForm.vue'),
-        },
-        {
-          path: 'validate-options',
-          name: 'testValidateOptions',
-          component: () => import('../views/test/TestValidateOptions.vue'),
-        },
+        // {
+        //   path: 'bs-form',
+        //   name: 'testBsForm',
+        //   component: () => import('../views/test/TestBsForm.vue'),
+        // },
       ],
     }, // 測試 - end
   ], // routes - end
